@@ -7,18 +7,18 @@ const About = React.lazy(() => import('./Pages/About/About'));
 const Footer = React.lazy(() => import('./Pages/Shared/Footer/Footer'));
 
 function App() {
-  return (
-    <BrowserRouter>
-        <Suspense fallback={<div>Loading...</div>}>
-            <Navbar />
+    return (
+        <BrowserRouter>
+            <Suspense fallback={<div>Loading...</div>}>
+                <Navbar />
                 <Routes>
-                    <Route path="/" element={<Home />}/>
-                    <Route path="/about" element={<About />}/>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/about" element={<About />} />
                 </Routes>
-            <Footer />
-        </Suspense>
-  </BrowserRouter>
-  );
+                <Footer />
+            </Suspense>
+        </BrowserRouter>
+    );
 }
 
 export default App;
